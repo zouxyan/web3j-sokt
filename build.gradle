@@ -1,6 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.9.24'
-    repositories { jcenter() }
+    ext.kotlin_version = '2.1.0'
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -11,7 +10,6 @@ buildscript {
 plugins {
     id 'idea'
     id 'jacoco'
-    id "com.jfrog.bintray" version "1.8.4"
     id "com.diffplug.spotless" version "6.25.0"
     id 'io.codearte.nexus-staging' version '0.30.0'
     id "de.marcphilipp.nexus-publish" version "0.4.0"
@@ -28,7 +26,6 @@ description 'web3j-sokt - Kotlin-based wrapper for multiple installations of the
 
 apply {
     [
-        'bintray',
         'jacoco',
         'java',
         'javadoc',
@@ -38,7 +35,7 @@ apply {
         'junit'
     ].each { buildScript ->
         download {
-            src "https://raw.githubusercontent.com/hyperledger/web3j-build-tools/main/gradle/$buildScript/build.gradle"
+            src "https://raw.githubusercontent.com/LFDT-web3j/web3j-build-tools/main/gradle/$buildScript/build.gradle"
             dest "$rootDir/gradle/$buildScript/build.gradle"
             overwrite false
             quiet true
@@ -71,8 +68,8 @@ dependencies {
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "17"
+    kotlinOptions.jvmTarget = "21"
 }
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "17"
+    kotlinOptions.jvmTarget = "21"
 }
