@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.4.1]() (Upcoming)
+# [0.5.0]() (Upcoming)
 
 ### Bug Fixes
 
@@ -11,11 +11,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
+* Add support for solidity 0.8.27, 0.8.28, 0.8.29 [#34](https://github.com/hyperledger/web3j-sokt/pull/34)
 * Bump snapshot version to 0.4.1 [#32](https://github.com/hyperledger/web3j-sokt/pull/32)
 
 ### BREAKING CHANGES
 
-*
+* Migrate to Java 21 [#34](https://github.com/hyperledger/web3j-sokt/pull/34)
+* Change repository [#34](https://github.com/hyperledger/web3j-sokt/pull/34)
 
 # [0.4.0](https://github.com/hyperledger/web3j-sokt/releases/tag/v0.4.0) (2024-05-23)
 
